@@ -6,6 +6,7 @@
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       bash
+      javascript
       json
       lua
       make
@@ -13,12 +14,12 @@
       nix
       regex
       toml
+      tsx
+      typescript
       vim
       vimdoc
       xml
       yaml
-      typescript
-      javascript
     ];
 
     settings.highlight = {
