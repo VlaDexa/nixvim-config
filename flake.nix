@@ -52,5 +52,9 @@
             default = nvim;
           };
         };
+
+      flake.modules = {
+        config = import ./config;
+      };
     };
 }
