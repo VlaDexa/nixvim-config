@@ -5,17 +5,10 @@
     ./which-key.nix
     ./conform.nix
     ./blink-cmp.nix
+    ./treesitter.nix
   ];
   plugins = {
     web-devicons.enable = true;
-    treesitter = {
-      enable = true;
-      folding = true;
-      settings.highlight = {
-        enable = true;
-        additional_vim_regex_highlighting = [ "ruby" ];
-      };
-    };
     lazydev.enable = true;
     sleuth.enable = true;
     nvim-autopairs.enable = true;
