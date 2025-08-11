@@ -6,6 +6,7 @@
     ./conform.nix
     ./blink-cmp.nix
     ./treesitter.nix
+    ./gitsigns.nix
   ];
   plugins = {
     web-devicons.enable = true;
