@@ -14,10 +14,20 @@
         flake-parts.follows = "flake-parts";
       };
     };
+    pre-commit-hooks = {
+      url = "github:cachix/git-hooks.nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
-    { nixvim, flake-parts, ... }@inputs:
+    {
+      nixvim,
+      flake-parts,
+      nixpkgs,
+      pre-commit-hooks,
+      ...
+    }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
@@ -45,12 +55,20 @@
           checks = {
             # Run `nix flake check .` to verify that your config is not broken
             default = nixvimLib.check.mkTestDerivationFromNixvimModule nixvimModule;
+            pre-commit-check = pre-commit-hooks.lib.${system}.run {
+              src = ./.;
+              hooks = {
+                nixfmt-rfc-style.enable = true;
+              };
+            };
           };
 
           packages = {
             # Lets you run `nix run .` to start nixvim
             default = nvim;
           };
+
+          formatter = nixpkgs.legacyPackages.${system}.nixfmt-tree;
         };
 
       flake.modules = {
