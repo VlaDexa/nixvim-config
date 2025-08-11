@@ -26,6 +26,7 @@
       flake-parts,
       nixpkgs,
       pre-commit-hooks,
+      self,
       ...
     }@inputs:
     flake-parts.lib.mkFlake { inherit inputs; } {
@@ -69,6 +70,15 @@
           };
 
           formatter = nixpkgs.legacyPackages.${system}.nixfmt-tree;
+
+          devShells.default =
+            let
+              pkgs = nixpkgs.legacyPackages.${system};
+            in
+            pkgs.mkShell {
+              inherit (self.checks.${system}.pre-commit-check) shellHook;
+              buildInputs = self.checks.${system}.pre-commit-check.enabledPackages;
+            };
         };
 
       flake.modules = {
