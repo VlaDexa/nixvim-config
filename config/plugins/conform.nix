@@ -8,6 +8,8 @@
       notify_on_error = false;
       formatters_by_ft = {
         nix = [ "${pkgs.nixfmt-rfc-style}/bin/nixfmt" ];
+        typescriptreact = [ "${pkgs.prettier}/bin/prettier" ];
+        typescript = [ "${pkgs.prettier}/bin/prettier" ];
       };
       format_on_save = lib.nixvim.mkRaw ''
         function(bufnr)
