@@ -6,15 +6,19 @@
     enable = true;
     settings = {
       notify_on_error = false;
+      formatters = {
+        nixfmt.command = lib.getExe pkgs.nixfmt-rfc-style;
+        prettierd.command = lib.getExe pkgs.prettierd;
+      };
       formatters_by_ft = {
         nix = [
-          (lib.getExe pkgs.nixfmt-rfc-style)
+          "nixfmt"
         ];
         typescriptreact = [
-          (lib.getExe pkgs.prettierd)
+          "prettierd"
         ];
         typescript = [
-          (lib.getExe pkgs.prettierd)
+          "prettierd"
         ];
       };
       format_on_save = lib.nixvim.mkRaw ''
