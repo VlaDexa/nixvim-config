@@ -7,9 +7,15 @@
     settings = {
       notify_on_error = false;
       formatters_by_ft = {
-        nix = [ "${pkgs.nixfmt-rfc-style}/bin/nixfmt" ];
-        typescriptreact = [ "${pkgs.prettier}/bin/prettier" ];
-        typescript = [ "${pkgs.prettier}/bin/prettier" ];
+        nix = [
+          (lib.getExe pkgs.nixfmt-rfc-style)
+        ];
+        typescriptreact = [
+          (lib.getExe pkgs.prettier)
+        ];
+        typescript = [
+          (lib.getExe pkgs.prettier)
+        ];
       };
       format_on_save = lib.nixvim.mkRaw ''
         function(bufnr)
