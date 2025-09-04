@@ -11,10 +11,10 @@
           (lib.getExe pkgs.nixfmt-rfc-style)
         ];
         typescriptreact = [
-          (lib.getExe pkgs.prettier)
+          (lib.getExe pkgs.prettierd)
         ];
         typescript = [
-          (lib.getExe pkgs.prettier)
+          (lib.getExe pkgs.prettierd)
         ];
       };
       format_on_save = lib.nixvim.mkRaw ''
