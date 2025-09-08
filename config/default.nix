@@ -35,7 +35,7 @@
   autoCmd = [
     {
       event = [ "TextYankPost" ];
-      callback = lib.nixvim.mkRaw "vim.highlight.on_yank";
+      callback = lib.nixvim.mkRaw "function() vim.highlight.on_yank() end";
       group = "kickstart-highlight-yank";
     }
   ];
