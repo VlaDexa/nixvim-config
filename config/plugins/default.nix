@@ -10,17 +10,17 @@
     ./which-key.nix
   ];
   plugins = {
-    web-devicons.enable = true;
+    copilot-vim.enable = true;
+    friendly-snippets.enable = true;
+    guess-indent.enable = true;
+    indent-blankline.enable = true;
     lazydev.enable = true;
-    sleuth.enable = true;
     nvim-autopairs.enable = true;
+    rustaceanvim.enable = true;
     todo-comments = {
       enable = true;
       settings.signs = false;
     };
-    friendly-snippets.enable = true;
-    indent-blankline.enable = true;
-    rustaceanvim.enable = true;
-    copilot-vim.enable = true;
+    web-devicons.enable = true;
   };
 }
