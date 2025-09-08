@@ -30,4 +30,6 @@
   ];
 
   clipboard.register = "unnamedplus";
+
+  nixpkgs.config.allowUnfree = true;
 }
