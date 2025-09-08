@@ -21,5 +21,6 @@
     friendly-snippets.enable = true;
     indent-blankline.enable = true;
     rustaceanvim.enable = true;
+    copilot-vim.enable = true;
   };
 }

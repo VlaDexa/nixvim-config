@@ -24,7 +24,10 @@
   performance.byteCompileLua.enable = true;
   performance.byteCompileLua.plugins = true;
   performance.combinePlugins.enable = true;
-  performance.combinePlugins.standalonePlugins = [ "conform.nvim" ];
+  performance.combinePlugins.standalonePlugins = [
+    "conform.nvim"
+    "copilot.vim"
+  ];
 
   clipboard.register = "unnamedplus";
 }
