@@ -1,19 +1,19 @@
 {
   imports = [
     ./mini
-    ./neo-tree.nix
-    ./which-key.nix
-    ./conform.nix
     ./blink-cmp.nix
-    ./treesitter.nix
+    ./conform.nix
     ./gitsigns.nix
+    ./neo-tree.nix
+    ./telescope.nix
+    ./treesitter.nix
+    ./which-key.nix
   ];
   plugins = {
     web-devicons.enable = true;
     lazydev.enable = true;
     sleuth.enable = true;
     nvim-autopairs.enable = true;
-    telescope.enable = true;
     todo-comments = {
       enable = true;
       settings.signs = false;

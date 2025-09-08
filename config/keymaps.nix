@@ -1,6 +1,12 @@
 { lib, ... }:
 {
   keymaps = [
+    {
+      key = "<Esc>";
+      action = "<cmd>nohlsearch<CR>";
+      mode = "n";
+      options.desc = "Clear highlights on search";
+    }
     # Diagnostic keymaps
     {
       key = "<leader>e";
