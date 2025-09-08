@@ -1,3 +1,4 @@
+{ lib, ... }:
 {
   # Import all your configuration modules here
   imports = [
@@ -30,6 +31,16 @@
   ];
 
   clipboard.register = "unnamedplus";
+
+  autoCmd = [
+    {
+      event = [ "TextYankPost" ];
+      callback = lib.nixvim.mkRaw "vim.highlight.on_yank";
+      group = "kickstart-highlight-yank";
+    }
+  ];
+
+  autoGroups.kickstart-highlight-yank.clear = true;
 
   nixpkgs.config.allowUnfree = true;
 }
