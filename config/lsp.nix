@@ -13,6 +13,7 @@
         settings.Lua.completion.callSnippet = "Replace";
       };
       eslint.enable = true;
+      csharp_ls.enable = true;
     };
     keymaps = [
       {
