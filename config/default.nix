@@ -41,6 +41,4 @@
   ];
 
   autoGroups.kickstart-highlight-yank.clear = true;
-
-  nixpkgs.config.allowUnfree = true;
 }
