@@ -1,8 +1,10 @@
 {
   plugins.neo-tree = {
     enable = true;
-    closeIfLastWindow = true;
-    filesystem.window.mappings."\\" = "close_window";
+    settings = {
+      close_if_last_window = true;
+      filesystem.window.mappings."\\" = "close_window";
+    };
   };
 
   keymaps = [

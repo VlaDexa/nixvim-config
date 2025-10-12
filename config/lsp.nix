@@ -10,7 +10,7 @@
       ts_ls.enable = true;
       lua_ls = {
         enable = true;
-        settings.Lua.completion.callSnippet = "Replace";
+        config.Lua.completion.callSnippet = "Replace";
       };
       eslint.enable = true;
       csharp_ls.enable = true;
