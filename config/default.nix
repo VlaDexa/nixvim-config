@@ -1,4 +1,4 @@
-{ lib, ... }:
+{ lib, config, ... }:
 {
   # Import all your configuration modules here
   imports = [
@@ -41,4 +41,6 @@
   ];
 
   autoGroups.kickstart-highlight-yank.clear = true;
+
+  nixpkgs.config.allowUnfree = if (config.nixpkgs.useGlobalPackages or false) then null else true;
 }
