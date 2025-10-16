@@ -1,3 +1,4 @@
+{ config, lib, ... }:
 {
   plugins.luasnip.enable = true;
   plugins.lazydev.enable = true;
@@ -49,9 +50,9 @@
           "lsp"
           "path"
           "snippets"
-          "lazydev"
-        ];
-        providers = {
+        ]
+        ++ lib.optional config.plugins.lazydev.enable "lazydev";
+        providers = lib.optionalAttrs config.plugins.lazydev.enable {
           lazydev = {
             module = "lazydev.integrations.blink";
             score_offset = 100;
