@@ -42,7 +42,7 @@
 
   autoGroups.kickstart-highlight-yank.clear = true;
 
-  nixpkgs = lib.optionalAttrs (!(config.nixpkgs.useGlobalPackages or false)) {
-    config.allowUnfree = true;
+  nixpkgs.config = lib.optionalAttrs (!(config.nixpkgs.useGlobalPackages or false)) {
+    allowUnfree = true;
   };
 }
