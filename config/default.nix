@@ -28,6 +28,7 @@
   performance.combinePlugins.standalonePlugins = [
     "conform.nvim"
     "copilot.vim"
+    "friendly-snippets"
   ];
 
   clipboard.register = "unnamedplus";
