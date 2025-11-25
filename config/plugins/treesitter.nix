@@ -20,6 +20,7 @@
       vimdoc
       xml
       yaml
+      elixir
     ];
 
     settings.highlight = {

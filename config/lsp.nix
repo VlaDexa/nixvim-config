@@ -6,7 +6,7 @@
     inlayHints.enable = true;
     servers = {
       clangd.enable = true;
-      nil_ls.enable = true;
+      nixd.enable = true;
       ts_ls.enable = true;
       lua_ls = {
         enable = true;
