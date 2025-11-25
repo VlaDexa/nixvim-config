@@ -14,6 +14,7 @@
       };
       eslint.enable = true;
       csharp_ls.enable = true;
+      elixirls.enable = true;
     };
     keymaps = [
       {
