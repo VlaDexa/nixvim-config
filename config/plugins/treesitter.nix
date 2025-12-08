@@ -6,6 +6,8 @@
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       bash
+      elixir
+      heex
       javascript
       json
       lua
@@ -20,7 +22,6 @@
       vimdoc
       xml
       yaml
-      elixir
     ];
 
     settings.highlight = {
