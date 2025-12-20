@@ -2,7 +2,7 @@
 {
   plugins.treesitter = {
     enable = true;
-    folding = true;
+    folding.enable = true;
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       bash
