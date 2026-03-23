@@ -22,5 +22,6 @@
       settings.signs = false;
     };
     web-devicons.enable = true;
+    lean.enable = true;
   };
 }
