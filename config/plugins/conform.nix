@@ -7,7 +7,7 @@
     settings = {
       notify_on_error = false;
       formatters = {
-        nixfmt.command = lib.getExe pkgs.nixfmt-rfc-style;
+        nixfmt.command = lib.getExe pkgs.nixfmt;
         prettierd.command = lib.getExe pkgs.prettierd;
       };
       formatters_by_ft = {
