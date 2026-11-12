@@ -15,6 +15,7 @@
       markdown
       nix
       regex
+      svelte
       toml
       tsx
       typescript
