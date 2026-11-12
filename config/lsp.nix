@@ -6,15 +6,16 @@
     inlayHints.enable = true;
     servers = {
       clangd.enable = true;
-      nixd.enable = true;
-      ts_ls.enable = true;
+      csharp_ls.enable = true;
+      elixirls.enable = true;
+      eslint.enable = true;
       lua_ls = {
         enable = true;
         config.Lua.completion.callSnippet = "Replace";
       };
-      eslint.enable = true;
-      csharp_ls.enable = true;
-      elixirls.enable = true;
+      nixd.enable = true;
+      svelte.enable = true;
+      ts_ls.enable = true;
     };
     keymaps = [
       {
