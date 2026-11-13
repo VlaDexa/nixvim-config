@@ -16,6 +16,7 @@
       nixd.enable = true;
       svelte.enable = true;
       ts_ls.enable = true;
+      tailwindcss.enable = true;
     };
     keymaps = [
       {
