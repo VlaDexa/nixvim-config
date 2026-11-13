@@ -6,8 +6,10 @@
 
     grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
       bash
+      css
       elixir
       heex
+      html
       javascript
       json
       lua
@@ -15,6 +17,7 @@
       markdown
       nix
       regex
+      scss
       svelte
       toml
       tsx
